@@ -1,0 +1,6 @@
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\Lib_LectorCompraEF\obj\Debug\Lib_LectorCompraEF.csproj.AssemblyReference.cache
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\Lib_LectorCompraEF\obj\Debug\Lib_LectorCompraEF.csproj.CoreCompileInputs.cache
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\Lib_LectorCompraEF\bin\Debug\Lib_LectorCompraEF.dll
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\Lib_LectorCompraEF\bin\Debug\Lib_LectorCompraEF.pdb
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\Lib_LectorCompraEF\obj\Debug\Lib_LectorCompraEF.dll
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\Lib_LectorCompraEF\obj\Debug\Lib_LectorCompraEF.pdb

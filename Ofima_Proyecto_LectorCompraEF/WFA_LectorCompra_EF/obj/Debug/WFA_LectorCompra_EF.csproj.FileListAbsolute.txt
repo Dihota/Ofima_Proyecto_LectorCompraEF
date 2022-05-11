@@ -1,0 +1,14 @@
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\bin\Debug\WFA_LectorCompra_EF.exe.config
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\bin\Debug\WFA_LectorCompra_EF.exe
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\bin\Debug\WFA_LectorCompra_EF.pdb
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\bin\Debug\Lib_LectorCompraEF.dll
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\bin\Debug\Lib_LectorCompraEF.pdb
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\obj\Debug\WFA_LectorCompra_EF.csproj.AssemblyReference.cache
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\obj\Debug\WFA_LectorCompra_EF.csproj.SuggestedBindingRedirects.cache
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\obj\Debug\WFA_LectorCompra_EF.Form1.resources
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\obj\Debug\WFA_LectorCompra_EF.Properties.Resources.resources
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\obj\Debug\WFA_LectorCompra_EF.csproj.GenerateResource.cache
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\obj\Debug\WFA_LectorCompra_EF.csproj.CoreCompileInputs.cache
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\obj\Debug\WFA_LectorCompra_EF.csproj.CopyComplete
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\obj\Debug\WFA_LectorCompra_EF.exe
+C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\NET\Ofima_Proyecto_LectorCompraEF\WFA_LectorCompra_EF\obj\Debug\WFA_LectorCompra_EF.pdb
