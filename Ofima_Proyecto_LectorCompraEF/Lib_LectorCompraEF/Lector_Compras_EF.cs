@@ -12,12 +12,14 @@ namespace Lib_LectorCompraEF
     {
         //Atributos
 
-        public int SalidaXML { get; set; }
+        private int SalidaXML { get; set; }
+        private string Nodo { get; set; }
 
         public Lector_Compras_EF()
         {
             
             SalidaXML = 0;
+            Nodo = string.Empty;
         }
 
         //Metodo encargado de retornar la informacion referente al emisor
@@ -168,7 +170,7 @@ namespace Lib_LectorCompraEF
                                 if (N3.Name == "cbc:Description")
                                 {
                                     //Se captura el xml que hay dentro de este Nodo
-                                    string Nodo = N3.InnerText;
+                                     Nodo = N3.InnerText;
 
                                     //Se invoca metodo auxiliar que obtiene los valores desde el nuevo xml.
                                     AuxiliarXMLAdquirienteAdi(Replace(Nodo), adqui);
@@ -312,6 +314,114 @@ namespace Lib_LectorCompraEF
                         break;
                 }
                 if (SalidaXML == 9) { break; }
+            }
+        }
+
+
+        public dynamic LectorXMLDetalle(string RutaXML, int Origen)
+        {
+            SalidaXML = 0;
+            Detalle detalle = new Detalle();
+            List<Detalle> ListaDetalles = new List<Detalle>();    
+            XmlDocument ReadXML = new XmlDocument();
+            ReadXML.LoadXml(Nodo);
+
+            foreach (XmlNode N1 in ReadXML.DocumentElement.ChildNodes)
+            {
+                if (N1.Name == "cac:InvoiceLine")
+                {
+                    foreach ( XmlNode N2 in N1.ChildNodes)
+                    {
+                        switch (N2.Name)
+                        {
+                            case "cbc:ID":
+                                detalle.Item = Convert.ToInt32(N2.InnerText);
+                                SalidaXML++;
+                                break;
+                            case "cbc:InvoicedQuantity":
+                                detalle.Cantidad = Convert.ToDouble(N2.InnerText);
+                                detalle.UND = N2.Attributes["unitCode"].Value;
+                                SalidaXML++;
+                                break;
+                            case "cbc:LineExtensionAmount":
+                                detalle.VlrTotal = Convert.ToDouble(N2.InnerText);
+                                SalidaXML++;
+                                break;
+                            case "cac:TaxTotal":
+                                foreach (XmlNode N3 in N2.ChildNodes)
+                                {
+                                    if (N3.Name == "cac:TaxCategory")
+                                    {
+                                        foreach (XmlNode N4 in N3.ChildNodes)
+                                        {
+                                            if (N4.Name == "cbc:Percent")
+                                            {
+                                                detalle.IVA = Convert.ToDouble(N4.InnerText);
+                                                SalidaXML++;
+                                            }
+                                            if(SalidaXML == 4) { break; }
+                                        }
+                                        if (SalidaXML == 4) { break; }
+                                    }
+                                }
+                                break;
+                            case "cac:Item":
+                                foreach (XmlNode N3 in N2.ChildNodes)
+                                {
+                                    switch (N3.Name)
+                                    {
+                                        case "cbc:Description":
+                                            detalle.Descripcion = N3.InnerText;
+                                            SalidaXML++;
+                                            break;
+                                        case "cac:SellersItemIdentification":
+                                            foreach (XmlNode N4 in N3.ChildNodes)
+                                            {
+                                                detalle.Codigo = N4.InnerText;
+                                                SalidaXML++;
+                                            }
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                }
+                                break;
+                            case "cac:Price":
+                                foreach (XmlNode N3 in N2.ChildNodes)
+                                {
+                                    if (N3.Name == "cbc:PriceAmount")
+                                    {
+                                        detalle.VlrUnit = Convert.ToDouble(N3.InnerText);
+                                        SalidaXML++;
+                                    }
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    ListaDetalles.Add(new Detalle
+                    {
+                        Item        = detalle.Item,
+                        Codigo      = detalle.Codigo,
+                        Descripcion = detalle.Descripcion,
+                        Cantidad    = detalle.Cantidad,
+                        UND         = detalle.UND,
+                        IVA         = detalle.IVA,
+                        VlrUnit     = detalle.VlrUnit,
+                        VlrTotal    = detalle.VlrTotal 
+                    });
+                }
+
+            }
+
+            if (Origen == 1)
+            {
+                return ListaDetalles;
+            }
+            else
+            {
+                return "";
             }
         }
 

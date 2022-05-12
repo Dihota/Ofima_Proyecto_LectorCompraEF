@@ -47,6 +47,7 @@ namespace WFA_LectorCompra_EF
             lblPlazo.Text = Convert.ToString(DataAdquiriente.Plazo);
             lblmedpag.Text = Convert.ToString(DataAdquiriente.FormaPago);
 
+            dgvDetalle.DataSource =  Lector.LectorXMLDetalle(Ruta, Origen);
 
 
         }
