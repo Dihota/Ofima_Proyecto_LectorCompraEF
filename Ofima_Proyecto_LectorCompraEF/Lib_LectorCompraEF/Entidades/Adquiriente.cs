@@ -17,7 +17,7 @@ namespace Lib_LectorCompraEF.Entidades
         public int CodPostal { get; set; }
         public string Ciudad { get; set; }
         public string Departamento { get; set; }
-        public long Celular { get; set; }
+        public string Celular { get; set; }
         public string Email { get; set; }
         public int MedioDePago { get; set; }
         public int FormaPago { get; set; }
