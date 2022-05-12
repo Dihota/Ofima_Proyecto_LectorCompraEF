@@ -254,7 +254,7 @@ namespace Lib_LectorCompraEF
                                                 switch (N4.Name)
                                                 {
                                                     case "cbc:Telephone":
-                                                        Adquirientes.Celular = Convert.ToInt64(N4.InnerXml);
+                                                        Adquirientes.Celular = N4.InnerXml;
                                                         SalidaXML++;
                                                         break;
                                                     case "cbc:ElectronicMail":
