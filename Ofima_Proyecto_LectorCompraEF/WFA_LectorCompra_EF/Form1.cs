@@ -51,5 +51,30 @@ namespace WFA_LectorCompra_EF
 
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Conex conexion = new Conex();
+            
+            if (conexion.OK())
+            {
+                MessageBox.Show("Conexion realizada con exito");
+            }
+            else
+            {
+                MessageBox.Show("Conexion no se pudo realizar");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LectorArchivos ReadArchivos = new LectorArchivos();
+            dgvDetalle.DataSource =  ReadArchivos.Archivos(@"C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\XML");
+
+            foreach (var item in ReadArchivos.Archivos(@"C:\Users\Hogar\Documents\Diego\ofima\Desarrollo\Lector Compra\XML"))
+            {
+                MessageBox.Show(item.Nombre);
+            }
+        }
     }
 }

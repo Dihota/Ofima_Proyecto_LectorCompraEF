@@ -26,6 +26,7 @@ namespace Lib_LectorCompraEF
         public dynamic LectorXMLEmisor(string RutaXML,int Origen)
         {
             Emisor NewEmisor = new Emisor();
+            Conex newconex = new Conex();
       
             //Se inicializa la variable encargada de determinar el momento de salir de los foreach
             SalidaXML = 0;
@@ -80,8 +81,11 @@ namespace Lib_LectorCompraEF
                 }
             }
 
+
+
             if (Origen==1)
             {
+                newconex.Guardar(NewEmisor);
                 return NewEmisor;
             }
             else

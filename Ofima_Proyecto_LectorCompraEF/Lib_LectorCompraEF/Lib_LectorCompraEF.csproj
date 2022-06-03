@@ -42,9 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Conex.cs" />
     <Compile Include="Entidades\Adquiriente.cs" />
     <Compile Include="Entidades\Detalle.cs" />
+    <Compile Include="Entidades\Directorio.cs" />
     <Compile Include="Entidades\Emisor.cs" />
+    <Compile Include="LectorArchivos.cs" />
     <Compile Include="Lector_Compras_EF.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
